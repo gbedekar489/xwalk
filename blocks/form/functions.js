@@ -19,18 +19,19 @@ function getFullName(firstname, lastname) {
 function getRandomTitle(firstname, lastname) {
   console.log(`${firstname} ${lastname}`);
 
-  const p = fetch('https://jsonplaceholder.typicode.com/todos/1', {
+  return fetch('https://jsonplaceholder.typicode.com/todos/1', {
     method: 'GET',
     credentials: 'omit',
     cache: 'no-store',
   })
     .then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-      console.log(res.json().title);
-      return res.json();
+      return res.json(); // parse once
     })
-    .then(({ title }) => (typeof title === 'string' ? title : ''));
-  return p;
+    .then((data) => {
+      console.log('GET data:', data); // now logs the actual JSON object
+      return typeof data?.title === 'string' ? data.title : '';
+    });
 }
 
 /**
