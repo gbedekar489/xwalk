@@ -17,7 +17,18 @@ function getFullName(firstname, lastname) {
  * @return {string}
  */
 function getRandomTitle(firstname, lastname) {
-  return `${firstname} ${lastname}`.trim();
+  const p = fetch('https://jsonplaceholder.typicode.com/todos/1', {
+    method: 'GET',
+    credentials: 'omit',
+    cache: 'no-store',
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      console.log(res.json().title);
+      return res.json();
+    })
+    .then(({ title }) => (typeof title === 'string' ? title : ''));
+  return p;
 }
 
 /**
