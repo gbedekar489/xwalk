@@ -15,7 +15,15 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
-function getJSONObject(firstname, lastname) {
+async function getJSONObject(firstname, lastname) {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
+    method: 'GET',
+    credentials: 'omit',
+    cache: 'no-store',
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+  const data = await res.json();
+  console.log('GET data:', data);
   return `${firstname} ${lastname}`.trim();
 }
 
