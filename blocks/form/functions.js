@@ -54,5 +54,5 @@ function days(endDate, startDate) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, getJSONObject, submitFormArrayToString
+  getFullName, days, getJSONObject, submitFormArrayToString,
 };
