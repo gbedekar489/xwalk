@@ -29,7 +29,7 @@ function getRandomTitle(firstname, lastname) {
       return res.json(); // parse once
     })
     .then((data) => {
-      console.log('GET data:', data); // now logs the actual JSON object
+      console.log('GET data title:', data?.title); // now logs the actual JSON object
       return typeof data?.title === 'string' ? data.title : '';
     });
 }
