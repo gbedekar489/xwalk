@@ -24,7 +24,7 @@ async function getJSONObject(firstname, lastname) {
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
   const data = await res.json();
   console.log('GET data:', data);
-  return `${firstname} ${lastname}`.trim();
+  return data?.title;
 }
 
 /**
