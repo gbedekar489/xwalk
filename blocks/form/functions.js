@@ -15,7 +15,7 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
- function getJSONObject(firstname, lastname) {
+function getJSONObject(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
 
@@ -53,4 +53,6 @@ function days(endDate, startDate) {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, getJSONObject, submitFormArrayToString };
+export {
+   getFullName, days, getJSONObject, submitFormArrayToString 
+  };
