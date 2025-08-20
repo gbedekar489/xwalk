@@ -15,7 +15,7 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
-async function getRandomTitle(firstName, lastName) {
+async function getRandomTitle(firstname, lastname) {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
     method: 'GET',
     credentials: 'omit',
