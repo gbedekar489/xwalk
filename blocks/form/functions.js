@@ -1,6 +1,6 @@
 /**
  * Get Full Name
- * @name getFullName Concats Customers first name and last name
+ * @name getFullName Concats first name and last name
  * @param {string} firstname in Stringformat
  * @param {string} lastname in Stringformat
  * @return {string}
