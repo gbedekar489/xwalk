@@ -15,7 +15,7 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
- function getFullName(firstname, lastname) {
+ function getJSONObject(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
 
