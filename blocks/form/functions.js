@@ -10,10 +10,10 @@ function getFullName(firstname, lastname) {
 }
 /**
  * Get Random JSON Object
- * @name getJSONObject Fetch JSON Object
+ * @name getRandomTitle Fetch JSON Object
  * @return {string}
  */
-async function getJSONObject() {
+async function getRandomTitle() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
     method: 'GET',
     credentials: 'omit',
@@ -60,5 +60,5 @@ function days(endDate, startDate) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, getJSONObject, submitFormArrayToString,
+  getFullName, days, getRandomTitle, submitFormArrayToString,
 };
