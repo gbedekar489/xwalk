@@ -8,6 +8,7 @@
 function getFullName(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
+
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
@@ -15,16 +16,8 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
-async function getRandomTitle(firstname, lastname) {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
-    method: 'GET',
-    credentials: 'omit',
-    cache: 'no-store',
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-  const data = await res.json();
-  console.log('GET data:', data);
-  return `${firstname} ${lastname}`.trim();
+function getRandomTitle(firstname, lastname) {
+    return `${firstname} ${lastname}`.trim();
 }
 
 /**
