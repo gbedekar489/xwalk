@@ -11,7 +11,7 @@ function getFullName(firstname, lastname) {
 /**
  * Get Random JSON Object
  * @name getJSONObject Fetch JSON Object
-  * @return {string}
+ * @return {string}
  */
 async function getJSONObject() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
