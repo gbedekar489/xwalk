@@ -22,7 +22,7 @@ async function getJSONObject() {
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
   const data = await res.json();
   console.log('GET data:', data);
-  return data?.title;
+  return data.title;
 }
 
 /**
