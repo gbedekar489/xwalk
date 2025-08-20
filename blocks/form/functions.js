@@ -15,7 +15,7 @@ function getFullName(firstname, lastname) {
  * @param {string} lastname in Stringformat
  * @return {string}
  */
-async function getRandomTitle(firstName,lastName) {
+async function getRandomTitle(firstName, lastName) {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
     method: 'GET',
     credentials: 'omit',
@@ -24,7 +24,7 @@ async function getRandomTitle(firstName,lastName) {
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
   const data = await res.json();
   console.log('GET data:', data);
-  return 'Girish';
+  return `${firstname} ${lastname}`.trim();
 }
 
 /**
