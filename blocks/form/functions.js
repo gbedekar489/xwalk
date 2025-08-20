@@ -17,7 +17,7 @@ function getFullName(firstname, lastname) {
  * @return {string}
  */
 function getRandomTitle(firstname, lastname) {
-    return `${firstname} ${lastname}`.trim();
+  return `${firstname} ${lastname}`.trim();
 }
 
 /**
