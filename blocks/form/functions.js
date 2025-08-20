@@ -11,11 +11,9 @@ function getFullName(firstname, lastname) {
 /**
  * Get Random JSON Object
  * @name getJSONObject Fetch JSON Object
- * @param {string} firstname in Stringformat
- * @param {string} lastname in Stringformat
- * @return {string}
+  * @return {string}
  */
-async function getJSONObject(firstname, lastname) {
+async function getJSONObject() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
     method: 'GET',
     credentials: 'omit',
