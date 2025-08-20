@@ -9,8 +9,8 @@ function getFullName(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
 /**
- * Get Random JSON Object
- * @name getRandomTitle Fetch JSON Object
+ * Get Random Title
+ * @name getRandomTitle Fetch Random Title
  * @return {string}
  */
 async function getRandomTitle() {
