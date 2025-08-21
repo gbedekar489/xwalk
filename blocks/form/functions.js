@@ -25,13 +25,12 @@ function setEnumNames() {
 /**
 * Fetch Countries
 * @name fetchCountriesXHR Fetch Countries List
-* @param {string} endpoint in String format
 * @return {string}
  */
-function fetchCountriesXHR(endpoint) {
-  console.log(`${endpoint}`);
+function fetchCountriesXHR() {
+  console.log('$$$$$ in Fetch Countries');
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', endpoint, true);
+  xhr.open('GET', 'http://api.geonames.org/countryInfoJSON?username=gbedekar', true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       const ok = xhr.status >= 200 && xhr.status < 300;
