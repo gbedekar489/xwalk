@@ -36,7 +36,7 @@ function fetchCountries(endpoint) {
   fetch(endpoint, { method: 'GET' })
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Failed to fetch data: ' + response.status + ' ' + response.statusText);
+        throw new Error('Failed to fetch data: ';
       }
       return response.json();
     })
