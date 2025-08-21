@@ -38,8 +38,6 @@ function fetchCountries(endpoint) {
       console.error(error);
     });
 }
-
-
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
