@@ -81,7 +81,7 @@ function days(endDate, startDate) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, getRandomTitle, submitFormArrayToString, 
-  fetchCountries, 
+  getFullName, days, getRandomTitle, submitFormArrayToString,
+  fetchCountries,
   setEnumNames, setEnums,
 };
