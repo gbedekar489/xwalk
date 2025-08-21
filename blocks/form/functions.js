@@ -15,9 +15,7 @@ function getFullName(firstname, lastname) {
   * @return {string}
  */
 function getRandomTitle() {
-  //const fld = guideBridge.resolveNode("$form.confirmation");
-  //fld.value = "GeeBee";
-  return 'Adobe'
+    return 'Adobe'
 }
 
 /**
