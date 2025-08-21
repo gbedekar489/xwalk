@@ -13,7 +13,7 @@ function getFullName(firstname, lastname) {
   * @returns {string[]}
  */
 function setEnums() {
-  return ["0","1","2","3","4","5","6"];
+  return ['0', '1', '2', '3', '4', '5', '6'];
 }
   
 /**
@@ -21,7 +21,7 @@ function setEnums() {
  * @returns {string[]}
 */
 function setEnumNames() {
-  return ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 }
   
 
