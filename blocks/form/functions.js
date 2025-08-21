@@ -29,13 +29,13 @@ function setEnumNames() {
 * @return {string}
  */
 function fetchCountriesXHR(endpoint) {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('GET', endpoint, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-      var ok = xhr.status >= 200 && xhr.status < 300;
+      let ok = xhr.status >= 200 && xhr.status < 300;
       if (ok) {
-        var data = JSON.parse(xhr.responseText);
+        let data = JSON.parse(xhr.responseText);
         console.log('Data fetched successfully:', data);
       } else {
         console.error('Error fetching data:', xhr.status, xhr.statusText);
