@@ -17,21 +17,9 @@ function getFullName(firstname, lastname) {
  * @return {string}
  */
 function getRandomTitle(firstname, lastname) {
-  console.log(`${firstname} ${lastname}`);
-
-  return fetch('https://jsonplaceholder.typicode.com/todos/1', {
-    method: 'GET',
-    credentials: 'omit',
-    cache: 'no-store',
-  })
-    .then((res) => {
-      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-      return res.json(); // parse once
-    })
-    .then((data) => {
-      console.log('GET data title:', data?.title); // now logs the actual JSON object
-      return typeof data?.title === 'string' ? data.title : '';
-    });
+  const fld = guideBridge.resolveNode("$form.confirmation");
+  fld.value = "GeeBee";
+  return "Adobe";
 }
 
 /**
