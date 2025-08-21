@@ -23,6 +23,25 @@ function setEnumNames() {
   return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 }
 /**
+* Submits data and attachments
+* @name submitFormDataAndAttachments Submit form data and attachments to REST endpoint
+* @param {string} endpoint in String format
+* @return {string}
+ */
+
+function submitFormDataAndAttachments(endpoint) {
+  fetch('http://api.geonames.org/countryInfoJSON?username=gbedekar')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error( error);
+  });
+
+}
+
+/**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
   * @return {string}
