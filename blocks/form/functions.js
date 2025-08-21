@@ -24,30 +24,26 @@ function setEnumNames() {
 }
 /**
 * Fetch Countries
-* @name fetchCountries Submit form data and attachments to REST endpoint
+* @name fetchCountriesXHR Fetch Countries List
 * @param {string} endpoint in String format
 * @return {string}
  */
-function fetchCountries(endpoint) {
-  if (typeof endpoint !== 'string' || endpoint.length === 0) {
-    throw new TypeError('endpoint must be a non-empty string');
-  }
-
-  fetch(endpoint, { method: 'GET' })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Failed to fetch data: ');
+function fetchCountriesXHR(endpoint) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', endpoint, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      var ok = xhr.status >= 200 && xhr.status < 300;
+      if (ok) {
+        var data = JSON.parse(xhr.responseText);
+        console.log('Data fetched successfully:', data);
+      } else {
+        console.error('Error fetching data:', xhr.status, xhr.statusText);
       }
-      return response.json();
-    })
-    .then((data) => {
-      console.log('Data fetched successfully:', data);
-    })
-    .catch((error) => {
-      console.error('Error fetching data:', error);
-    });
+    }
+  };
+  xhr.send();
 }
-
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
@@ -92,6 +88,6 @@ function days(endDate, startDate) {
 // eslint-disable-next-line import/prefer-default-export
 export {
   getFullName, days, getRandomTitle, submitFormArrayToString,
-  fetchCountries,
+  fetchCountriesXHR,
   setEnumNames, setEnums,
 };
