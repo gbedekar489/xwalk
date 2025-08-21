@@ -23,14 +23,14 @@ function setEnumNames() {
   return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 }
 /**
-* Submits data and attachments
-* @name submitFormDataAndAttachments Submit form data and attachments to REST endpoint
+* Fetch Countries
+* @name fetchCountries Submit form data and attachments to REST endpoint
 * @param {string} endpoint in String format
 * @return {string}
  */
 
-function submitFormDataAndAttachments(endpoint) {
-  fetch('http://api.geonames.org/countryInfoJSON?username=gbedekar')
+function fetchCountries(endpoint) {
+  fetch(endpoint)
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -84,5 +84,5 @@ function days(endDate, startDate) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, getRandomTitle, submitFormArrayToString, setEnumNames, setEnums,
+  getFullName, days, getRandomTitle, submitFormArrayToString, fetchCountries, setEnumNames, setEnums,
 };
