@@ -29,6 +29,7 @@ function setEnumNames() {
 * @return {string}
  */
 function fetchCountriesXHR(endpoint) {
+  console.log(`${endpoint}`);
   const xhr = new XMLHttpRequest();
   xhr.open('GET', endpoint, true);
   xhr.onreadystatechange = function () {
