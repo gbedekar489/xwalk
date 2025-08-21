@@ -15,7 +15,7 @@ function getFullName(firstname, lastname) {
   * @return {string}
  */
 function getRandomTitle() {
-  return 'Adobe'
+  return 'Adobe';
 }
 
 /**
