@@ -35,11 +35,9 @@ async function fetchCountries(endpoint) {
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
     }
-
     const data = await response.json();
     console.log(data);
-   
-  } catch (error) {
+     } catch (error) {
     console.error(error);
   }
 }
