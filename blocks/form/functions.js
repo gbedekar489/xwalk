@@ -15,7 +15,6 @@ function getFullName(firstname, lastname) {
 function setEnums() {
   return ['0', '1', '2', '3', '4', '5', '6'];
 }
-  
 /**
  * @name setEnumNames
  * @returns {string[]}
@@ -23,8 +22,6 @@ function setEnums() {
 function setEnumNames() {
   return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 }
-  
-
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
@@ -33,7 +30,6 @@ function setEnumNames() {
 function getRandomTitle() {
   return 'Adobe';
 }
-
 /**
  * Custom submit function
  * @param {scope} globals
