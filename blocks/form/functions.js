@@ -28,22 +28,31 @@ function setEnumNames() {
 * @return {string}
  */
 function fetchCountriesXHR() {
-  console.log('$$$$$ in Fetch Countries');
+  const url = 'https://restcountries.com/v3.1/all?fields=name,cca2,cca3,region';
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://api.geonames.org/countryInfoJSON?username=gbedekar', true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      const ok = xhr.status >= 200 && xhr.status < 300;
-      if (ok) {
+
+  xhr.open('GET', url, true);
+
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState !== 4) {
+      return;
+    }
+    if (xhr.status >= 200 && xhr.status < 300) {
+      try {
         const data = JSON.parse(xhr.responseText);
-        console.log('Data fetched successfully:', data);
-      } else {
-        console.error('Error fetching data:', xhr.status, xhr.statusText);
+        const countryNames = data.map((c) => c.name.common);
+        console.log('Country names:', countryNames);
+      } catch (e) {
+        console.error('Error parsing response:', e);
       }
+    } else {
+      console.error('Error fetching countries:', xhr.status, xhr.statusText);
     }
   };
+
   xhr.send();
 }
+
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
