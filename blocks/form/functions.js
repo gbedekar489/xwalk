@@ -28,18 +28,17 @@ function setEnumNames() {
 * @param {string} endpoint in String format
 * @return {string}
  */
-
 function fetchCountries(endpoint) {
-  fetch(`${endpoint}`)
-    .then(response => response.json())
-    .then(data => {
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then((data) => {
       console.log(data);
-  })
-  .catch(error => {
-    console.error( error);
-  });
-
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
+
 
 /**
  * Get Random Title
