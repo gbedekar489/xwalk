@@ -12,11 +12,9 @@ function getFullName(firstname, lastname) {
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
- * @param {string} firstname in Stringformat
- * @param {string} lastname in Stringformat
- * @return {string}
+  * @return {string}
  */
-function getRandomTitle(firstname, lastname) {
+function getRandomTitle() {
   //const fld = guideBridge.resolveNode("$form.confirmation");
   //fld.value = "GeeBee";
   return 'Adobe'
