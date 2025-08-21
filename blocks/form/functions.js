@@ -28,19 +28,26 @@ function setEnumNames() {
 * @param {string} endpoint in String format
 * @return {string}
  */
-async function fetchCountries(endpoint) {
-  try {
-    const response = await fetch(endpoint);
-
-    if (!response.ok) {
-      throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
-    }
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error(error);
+function fetchCountries(endpoint) {
+  if (typeof endpoint !== 'string' || endpoint.length === 0) {
+    throw new TypeError('endpoint must be a non-empty string');
   }
+
+  fetch(endpoint, { method: 'GET' })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch data: ' + response.status + ' ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Data fetched successfully:', data);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
 }
+
 /**
  * Get Random Title
  * @name getRandomTitle Fetch Random Title
