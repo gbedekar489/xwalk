@@ -8,6 +8,22 @@
 function getFullName(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
+/**
+  * @name setEnums
+  * @returns {string[]}
+ */
+function setEnums() {
+  return ["0","1","2","3","4","5","6"];
+}
+  
+/**
+ * @name setEnumNames
+ * @returns {string[]}
+*/
+function setEnumNames() {
+  return ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+}
+  
 
 /**
  * Get Random Title
@@ -53,5 +69,5 @@ function days(endDate, startDate) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, getRandomTitle, submitFormArrayToString,
+  getFullName, days, getRandomTitle, submitFormArrayToString, setEnumNames, setEnums,
 };
